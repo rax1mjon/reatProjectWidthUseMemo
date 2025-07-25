@@ -59,9 +59,13 @@ const HomePage = () => {
   const handelAddFormSubmit = useCallback(
     (e) => {
       e.preventDefault();
-      const form = e.currentTarget;
 
-      if (form.checkValidity()) {
+      if (
+        product.name.trim() &&
+        product.price > 0 &&
+        product.category &&
+        product.quantity > 0
+      ) {
         const newProduct = { id: uuid(), ...product };
 
         const updatedProducts = [...products, newProduct];
