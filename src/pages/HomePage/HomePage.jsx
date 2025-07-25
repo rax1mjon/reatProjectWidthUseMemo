@@ -3,7 +3,8 @@ import AddForm from "../../assets/AddForm/AddForm";
 import Table from "../../assets/Table/Table";
 import Search from "../../assets/Search/Search";
 import { v4 as uuid } from "uuid";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./HomePage.scss";
 const HomePage = () => {
   const [product, setProduct] = useState({
@@ -66,6 +67,8 @@ const HomePage = () => {
         product.category &&
         product.quantity > 0
       ) {
+        console.log("good");
+
         const newProduct = { id: uuid(), ...product };
 
         const updatedProducts = [...products, newProduct];
@@ -81,7 +84,9 @@ const HomePage = () => {
           description: "",
         });
       } else {
-        toast("The information is not complete!!");
+        console.log("error");
+
+        toast.error("The information is not complete!!");
       }
     },
     [product, products]
@@ -143,6 +148,7 @@ const HomePage = () => {
             setProduct={setProduct}
             handelSubmit={handelAddFormSubmit}
           />
+          <ToastContainer />
           <div className="hero--main">
             <Search SearchSortFilter={SearchSortFilter} />
             <Table products={products} deleteFunc={deleteFunc} />
