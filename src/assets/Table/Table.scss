@@ -1,0 +1,49 @@
+.product-table {
+  width: 100%;
+  max-width: 730px;
+  min-width: 730px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table tr .btns {
+  display: flex;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}

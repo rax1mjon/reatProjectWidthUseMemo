@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30.01px;
+  letter-spacing: 0%;
+  color: #6e7191;
+}
+
+.btn {
+  padding: 18px 24px;
+  background-color: #0075ff;
+  border-radius: 14px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #005bb5;
+    transform: scale(1.05) translateY(-2px) translateZ(0);
+  }
+  &:active {
+    background-color: #004a8c;
+    transform: scale(0.95) translateY(2px) translateZ(0);
+  }
+
+  &.btnWhite {
+    background-color: #fff;
+    color: #0075ff;
+    box-shadow: 0px 4px 10px 0px #14142b35;
+
+    &:hover {
+      background-color: #005bb5;
+      color: #fff;
+      transform: scale(1.05) translateY(-2px) translateZ(0);
+    }
+    &:active {
+      background-color: #004a8c;
+      color: #fff;
+      transform: scale(0.95) translateY(2px) translateZ(0);
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 155px;
+}
