@@ -3,7 +3,7 @@ import AddForm from "../../assets/AddForm/AddForm";
 import Table from "../../assets/Table/Table";
 import Search from "../../assets/Search/Search";
 import { v4 as uuid } from "uuid";
-
+import { toast } from "react-toastify";
 import "./HomePage.scss";
 const HomePage = () => {
   const [product, setProduct] = useState({
@@ -80,6 +80,8 @@ const HomePage = () => {
           quantity: 0,
           description: "",
         });
+      } else {
+        toast("The information is not complete!!");
       }
     },
     [product, products]
